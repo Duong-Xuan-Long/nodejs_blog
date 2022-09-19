@@ -9,20 +9,18 @@ const route = require('./routes');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-    
 app.use(
-
-       express.urlencoded({
-            extended:true  ,
-      }),
+    express.urlencoded({
+        extended: true,
+    }),
 );
 app.use(express.json());
 //HTTP logger
  app.use(morgan('combined'));
 
 //Template engine
-      app.engine(
-    'hbs',
+ app.engine(
+     'hbs',
 
     handlebars.engine({
         defaultLayout: 'main',

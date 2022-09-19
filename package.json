@@ -7,7 +7,8 @@
     "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -25,17 +26,15 @@
     "url": "https://github.com/Duong-Xuan-Long/nodejs_blog/issues"
   },
   "homepage": "https://github.com/Duong-Xuan-Long/nodejs_blog#readme",
-
   "lint-staged": {
-    "src/**/*.{json,js,scss}": ["prettier --single-quote --trailing-comma all --tab-width 4 --write","git add"]
+    "src/**/*.{json,js,scss}": [
+      "prettier --single-quote --trailing-comma all --tab-width 4 --write"]
   },
-
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-
   "dependencies": {
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6"

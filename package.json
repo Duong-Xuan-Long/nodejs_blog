@@ -25,18 +25,16 @@
     "url": "https://github.com/Duong-Xuan-Long/nodejs_blog/issues"
   },
   "homepage": "https://github.com/Duong-Xuan-Long/nodejs_blog#readme",
-
-  "lint-staged":{
-    "src/**/*.{json,js,scss}":"prettier --single-quote --trailing-comma all --tab-width 4 --write"
-  },
-  "husky":{
-    "hooks":{
-      "pre-commit":"lint-staged"
-    }
+  "lint-staged": {
+    "src/**/*.{json,js,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
   "dependencies": {
     "express": "^4.18.1",
-    "express-handlebars": "^6.0.6"
+    "express-handlebars": "^6.0.6",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.6.1",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
     "husky": "^8.0.1",

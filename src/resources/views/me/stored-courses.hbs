@@ -23,13 +23,23 @@
     <table class="table mt-4">
       <thead>
         <tr>
-          <th scope="col" colspan="2">#</th>
+          <th scope="col"></th>
+          <th scope="col">
+            ID
+            {{{sortable '_id' _sort}}}
+          </th>
           <th scope="col">
             Name
-            <a href="?_sort&column=name&type=desc"><i class="fa-solid fa-file fa-2x ms-2"></i></a>
+            {{{sortable 'name' _sort}}}
           </th>
-          <th scope="col">Level</th>
-          <th scope="col" colspan="2">createdAt</th>
+          <th scope="col">
+            Level
+            {{{sortable 'level' _sort}}}
+          </th>
+          <th scope="col" colspan="2">
+            createdAt
+            {{{sortable 'createdAt' _sort}}}
+            </th>
         </tr>
       </thead>
       <tbody>
@@ -42,7 +52,7 @@
               </label>
             </div>
           </td>
-          <th scope="row">{{sum @index 1}}</th>
+          <th scope="row">{{this._id}}</th>
           <td>{{this.name}}</td>
           <td>{{this.level}}</td>
           <td>{{this.createdAt}}</td>

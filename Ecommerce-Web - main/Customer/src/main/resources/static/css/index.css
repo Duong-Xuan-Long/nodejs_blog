@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif;
+}
+.wrapperCard{
+    margin-top:100px;
+    margin-bottom: 100px;
+}
+.detailedcard {
+    background-color: #f2f2f2;
+    width:538px ;
+    height:auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    padding-bottom:80px ;
+}
+.detailedcard .name{
+    font-weight: 400;
+    font-size: 35px;
+}
+.detailedcard .content {
+    font-size: 20px;
+    z-index: -1;
+}
+.detailedcard .price {
+    font-size: 48px;
+    color:#111111;
+    font-weight: 600;
+    line-height: 72px;
+    padding-top: 85px ;
+}
+.detailedcard button{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    position: absolute;
+    right: 0px;
+    top:0px;
+    z-index: 1000;
+}
+.detailImg img {
+    height:507px;
+    width: 337px;
+}

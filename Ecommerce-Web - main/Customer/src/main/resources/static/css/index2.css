@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;1,700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.single-product1 .single_card {
+    height:331px;
+    width: 487px;
+    position: relative;
+    matgin-left:10px;
+    
+}
+.single-product1 .single_card .name{
+    margin-bottom: 8px;
+    color: #b08ead;
+}
+
+.single-product1 .single_card .content{
+    text-decoration:none;
+    line-height: 53px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #4b3049;
+}
+.single-product1 .single_card .btn-3 {
+    text-decoration:none;
+    position: absolute;
+    left:0;
+    bottom:38px;
+    color: #b08ead;
+    font-size: 15px;
+    font-weight: 300;
+    border:1px solid #b08ead;
+    border-radius: 10%;
+    padding:20px;
+}
+.single-product1 .single_card .btn-3:hover,.single_card .btn-3:active{
+    background-color: #b08ead;
+    color: aliceblue;
+}
+
+.single-product1 .single_card_img {
+    position: relative;
+    background-color: #b08ead;
+
+    height: 280px;
+    width: 300px;
+    
+}
+.single-product1 .single_card_img img.img1{
+    height: 280px;
+    width: 300px;
+    position:absolute;
+    left: -18px;
+    top: 30px;
+    margin-left: 50px;
+}
+
+.single-product2 .single_card {
+    height:331px;
+    width: 487px;
+    position: relative;
+    matgin-left:10px;
+
+}
+.single-product2 .single_card .name{
+    margin-bottom: 8px;
+    color: #b08ead;
+}
+
+.single-product2 .single_card .content{
+    text-decoration:none;
+    line-height: 53px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #4b3049;
+    text-align: right;
+}
+.single-product2 .single_card .btn-3 {
+    text-decoration:none;
+    position: absolute;
+    right:0;
+    bottom:38px;
+    color: #b08ead;
+    font-size: 15px;
+    font-weight: 300;
+    border:1px solid #b08ead;
+    border-radius: 10%;
+    padding:20px;
+
+}
+.single-product2 .single_card .btn-3:hover,.single_card .btn-3:active{
+    background-color: #b08ead;
+    color: aliceblue;
+}
+
+.single-product2 .single_card_img {
+    position: relative;
+    background-color: #b08ead;
+
+    height: 280px;
+    width: 300px;
+
+}
+.single-product2 .single_card_img img.img1{
+    height: 280px;
+    width: 300px;
+    position:absolute;
+    left: -78px;
+    top: 30px;
+    margin-left: 50px;
+}
+

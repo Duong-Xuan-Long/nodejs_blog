@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Trang chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" th:href="@{/img/favicon.png}">
+    <link rel="stylesheet" th:href="@{/css/index2.css}">
+    <!--    link horizontal card-->
+
+    <link rel="stylesheet" th:href="@{/css/trendingCards.css}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" th:href="@{/css/animate.css}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" th:href="@{/css/all.css}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" th:href="@{/css/flaticon.css}">
+    <link rel="stylesheet" th:href="@{/css/themify-icons.css}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" th:href="@{/css/slick.css}">
+    <!-- style CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+<!--::header part start::-->
+<header class="main_menu home_menu">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html"> <img th:src="@{/img/logo.png}" alt="logo"> </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menu_icon"><i class="fas fa-bars"></i></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="@{/index}">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="@{/about}">Về chúng tôi</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
+                                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sản phẩm
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                    <a class="dropdown-item" th:href="@{/products/page/1}"> Danh sách sản phẩm</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
+                                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Danh mục
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                                    <a th:if="${session.username != null}" class="dropdown-item" th:href="@{/account}">
+                                        Thông tin cá nhân
+                                    </a>
+                                    <a class="dropdown-item" th:href="@{/check-out}">Kiểm tra trước đơn</a>
+                                    <a class="dropdown-item" th:href="@{/cart}">Giỏ hàng</a>
+                                    <a class="dropdown-item" th:href="@{/order}">Đơn hàng</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2"
+                                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Thao tác
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                                    <a th:if="${session.username == null}" class="dropdown-item" th:href="@{/login}">
+                                        Đăng nhập
+
+                                    </a>
+                                    <a th:if="${session.username == null}" class="dropdown-item" th:href="@{/register}">
+                                        Đăng kí
+
+                                    </a>
+                                    <a th:if="${session.username != null}" class="dropdown-item" th:href="@{/logout-handle}">
+                                        Đăng xuất
+
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hearer_icon d-flex align-items-center">
+                        <a th:href="@{/cart}">
+                            <span style="text-decoration: none;color:black;">Giỏ hàng :</span> <i class="flaticon-shopping-cart-black-shape"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header part end-->
+
+<!-- banner part start-->
+<section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <div class="banner_text">
+                    <div class="banner_text_iner">
+                        <h1>SẢN PHẨM TỐT NHẤT</h1>
+                        <p>Mang lại trải nghiệm tốt cho bạn</p>
+                        <a th:href="@{/products/page/1}" class="btn_1">Mua hàng ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner_img">
+        <img th:src="@{/img/banner.png}" alt="#" class="img-fluid">
+        <img th:src="@{/img/banner_pattern.png} " alt="#" class="pattern_img img-fluid">
+    </div>
+</section>
+<!-- banner part start-->
+
+<!-- product list start-->
+<section class="singleProductList">
+    <div class="">
+        <div class="row">
+            <div class="col-lg-12" th:each="product,state:${randomProducts}">
+
+                <div th:if="${state.index%2==0}" class="single-product1 d-flex justify-content-evenly my-5 col-lg-12">
+                    <div class="single_card_img">
+                        <img th:src="'data:image/jpeg;base64,' + ${product.image}" style="border-color:#e7c4e4;"
+                             alt="" class="img1">
+                    </div>
+                    <div class="single_card">
+                        <h5 class="name" th:text="|Giá sản phẩm : ${product.salePrice}đ|">Started from $10</h5>
+                        <a href="single-product.html" class="content"
+                           th:text="|${#strings.length(product.description)>40?#strings.substring(product.description,0,40):product.description}...|">Printed
+                            memory foam
+                            brief modern throw
+                            pillow case</a>
+
+                        <a th:href="@{/products/0}" class="btn-3">Khám phá</a>
+                    </div>
+                </div>
+
+                <div th:if="not ${state.index%2==0}"
+                     class="single-product2 d-flex justify-content-evenly my-5 flex-row-reverse">
+                    <div class="single_card_img">
+                        <img th:src="'data:image/jpeg;base64,' + ${product.image}"
+                             alt="" class="img1">
+                    </div>
+                    <div class="single_card ">
+                        <h5 class="name d-flex justify-content-end" th:text="|Giá sản phẩm : ${product.salePrice}đ|"></h5>
+                        <a href="single-product.html" class="content d-flex justify-content-end "
+                           th:text="|${#strings.length(product.description)>40?#strings.substring(product.description,0,40):product.description}...|"> </a>
+                        <a th:href="@{/products/0}" class="btn-3 text-right">Khám phá</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!-- product list end-->
+
+
+<!-- trending item start-->
+<section class="trending_items">
+    <div class="">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_tittle text-center">
+                    <h2>Một số sản phẩm có giá cao nhất</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-right: 150px;margin-left: 190px;">
+
+            <div class="product-card mx-4" style="max-width:390px;" th:each="product:${highestPriceProducts}">
+                <form method="POST" th:action="@{/add-to-cart}">
+                    <div class="badge">Hot</div>
+                    <div class="product-tumb">
+                        <img th:src="'data:image/jpeg;base64,' + ${product.image}" alt="">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-catagory"
+                              th:text="${product.category!=null?product.category.name:'No category'}">Women,bag</span>
+                        <h4><a th:href="@{/product-detail/{id} (id = ${product.id})}"
+                               th:text="${product.name}">Women leather bag</a></h4>
+                        <p th:text="|${#strings.length(product.description)>40?#strings.substring(product.description,0,40):product.description}...|"></p>
+                        <div class="product-bottom-details" style="width:40%;">
+                            <div class="product-price" th:text="|${product.salePrice}đ  |">$230.99</div>
+                            <div class="product-links" style="width:40%;">
+                                <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                            <input type="hidden" th:value="${product.id}" style="border-width:0px" name="id">
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!-- trending item end-->
+
+<!-- client review part here -->
+
+<!-- client review part end -->
+
+
+<!-- feature part here -->
+<section class="feature_part section_padding">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6">
+                <div class="feature_part_tittle">
+                    <h3>Luôn sáng tạo đổi mới cùng với phong cách chuyên nghiệp</h3>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="feature_part_content">
+                    <p>Các nhân viên được đào tạo bài bản và có một tinh thần làm việc lớn. Công ty mong muốn sẽ đem lại những sản phẩm
+                        tốt nhất cho người dùng. Hãy cùng đồng hành với chúng tôi !
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_feature_part">
+                    <img th:src="@{/img/icon/feature_icon_1.svg}" alt="#">
+                    <h4>Hỗ trợ thanh toán bằng thẻ</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_feature_part">
+                    <img th:src="@{/img/icon/feature_icon_2.svg}" alt="#">
+                    <h4>Đặt hàng Online</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_feature_part">
+                    <img th:src="@{/img/icon/feature_icon_3.svg}" alt="#">
+                    <h4>Miễn phí vận chuyển</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_feature_part">
+                    <img th:src="@{/img/icon/feature_icon_4.svg}" alt="#">
+                    <h4>Đặt hàng với quà tặng</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- feature part end -->
+
+<!--::footer_part start::-->
+<footer class="footer_part">
+    <div class="footer_iner">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-8">
+                    <div class="footer_menu">
+                        <div class="footer_logo">
+                            <a href="index.html"><img th:src="@{/img/logo.png}" alt="#"></a>
+                        </div>
+                        <div class="footer_menu_item">
+                            <a th:href="@{/index}">Trang chủ</a>
+                            <a th:href="@{/about}">Về chúng tôi</a>
+                            <a th:href="@{/products/page/1}">Sản phẩm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="social_icon">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!--::footer_part end::-->
+
+<!-- jquery plugins here-->
+<script th:src="@{/js/jquery-1.12.1.min.js}"></script>
+<!-- popper js -->
+<script th:src="@{/js/popper.min.js}"></script>
+<!-- bootstrap js -->
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<!-- magnific popup js -->
+<script th:src="@{/js/jquery.magnific-popup.js}"></script>
+<!-- carousel js -->
+<script th:src="@{/js/owl.carousel.min.js}"></script>
+<script th:src="@{/js/jquery.nice-select.min.js}"></script>
+<!-- slick js -->
+<script th:src="@{/js/slick.min.js}"></script>
+<script th:src="@{/js/jquery.counterup.min.js}"></script>
+<script th:src="@{/js/waypoints.min.js}"></script>
+<script th:src="@{/js/contact.js}"></script>
+<script th:src="@{/js/jquery.ajaxchimp.min.js}"></script>
+<script th:src="@{/js/jquery.form.js}"></script>
+<script th:src="@{/js/jquery.validate.min.js}"></script>
+<script th:src="@{/js/mail-script.js}"></script>
+<!-- custom js -->
+<script th:src="@{/js/custom.js}"></script>
+</body>
+
+</html>

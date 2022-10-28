@@ -102,7 +102,7 @@ public class AuthController {
     public String forgotPassword(@RequestParam("email") String email, RedirectAttributes redirectAttributes) {
         try {
             forgotPasswordService.forgotPassword(email);
-            redirectAttributes.addFlashAttribute("success", "Đăng nhập với mật khẩu mới");
+            redirectAttributes.addFlashAttribute("success", "Mở email của bạn lấy mật khẩu mới và đăng nhập lại");
         } catch (BadRequestException e) {
             redirectAttributes.addFlashAttribute("error", e.getMessage());
         } catch (MessagingException e) {

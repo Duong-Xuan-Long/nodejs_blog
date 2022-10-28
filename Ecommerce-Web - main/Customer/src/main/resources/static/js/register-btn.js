@@ -24,6 +24,7 @@ document
             })
 
             window.location.href="/shop/login";
+            alert("Bạn đã đăng kí thành công bấm vào email để kích hoạt tài khoản");
         }
 
     } catch (error) {

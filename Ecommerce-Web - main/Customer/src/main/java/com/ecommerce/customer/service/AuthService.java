@@ -155,8 +155,9 @@ public class AuthService {
         tokenRepository.save(token);
 
         // Gửi email
-        String link = "<a href=" +"http://localhost:8020/shop/confirm?token="+ tokenString+
-                ">Click the link to confirm your account</a>"  ;
+        String link="<p>Nhấn vào đường link để kích hoạt tài khoản</p>";
+        link += "<a href=" +"http://localhost:8020/shop/confirm?token="+ tokenString+
+                ">Link kích hoạt tài khoản</a>"  ;
         mailService.send(customer.getUsername(), "Xác thực tài khoản", link);
 
         return link;

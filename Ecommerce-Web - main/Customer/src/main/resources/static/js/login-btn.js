@@ -13,6 +13,7 @@ document
 
             window.location.href="/shop";
         } catch (error) {
+            alert("Mật khẩu hoặc email không dúng kiểm tra lại");
             console.log(error.response.data);
         }
 })
